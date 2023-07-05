@@ -21,5 +21,8 @@ DIRECTIONS
    - requirements.txt can be found in this repository.
    - Upload with whatever method. Github, FTP, whatever.
    - ```pip install -r /path/to/requirements.txt```
-8. TBD... Install Apache.
-9. TBD... Install wsgi.
+
+
+LATER....
+1. Install Apache
+2. Install wsgi
