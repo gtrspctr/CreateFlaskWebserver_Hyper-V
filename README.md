@@ -33,7 +33,10 @@
      - You should see "(webserver)" in front of the terminal line, indicating you are working in the environment.
 
 ### Install Nginx
-1. ```sudo apt install -y....``` to come later
+1. ```sudo apt update```
+2. ```sudo apt install -y nginx
+3. Add allow rule to firewall:
+   - sudo ufw allow 'Nginx HTTP' or 'Nginx HTTPS' or 'Nginx Full'
 2. /etc/nginx/nginx.conf add proxy pass stuff
    - https://www.youtube.com/watch?v=BpcK5jON6Cg
 3. get rid of default sites
