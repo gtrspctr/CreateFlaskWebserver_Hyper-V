@@ -26,10 +26,10 @@
    - Install with the following:  https://github.com/cli/cli/blob/trunk/docs/install_linux.md
    - Clonerepo using:  ```gh repo clone USERNAME/REPOSITORY```
 10. Even if not using github, create a folder for your project.
-   - Create project environment:  ```python3 -m venv REPOSITORY``` (I will use 'webserver' as an example)
-   - Enter/activate environment:  ```source webserver/bin/activate```
-     - You should see "(webserver)" in front of the terminal line, indicating you are working in the environment.
-   - Exit/deactivate environment:  ```deactivate```
+    - Create project environment:  ```python3 -m venv REPOSITORY``` (I will use 'webserver' as an example)
+    - Enter/activate environment:  ```source webserver/bin/activate```
+      - You should see "(webserver)" in front of the terminal line, indicating you are working in the environment.
+    - Exit/deactivate environment:  ```deactivate```
 
 ### Install Flask and other libraries
 1. Activate virtual environment, upload requirements.txt and install.
