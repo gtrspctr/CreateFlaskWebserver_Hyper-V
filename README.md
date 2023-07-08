@@ -12,19 +12,21 @@
    - ```sudo ufw allow ssh```
    - ```sudo ufw enable```
    - ```sudo ufw status```
-6. Install and sign into Github
+6. If you are going to use github, create github directory, but don't clone repo yet.
    - ```mkdir github && cd ./github```
-   - Install with the following:  https://github.com/cli/cli/blob/trunk/docs/install_linux.md
-   - Install repo using:  ```gh repo clone USERNAME/REPOSITORY```
 7. Python should be installed by default. Verify, and install pip:
    - Check Python version:
      - ```python3```
    - Install pip:
      - ```sudo apt install -y python3-pip```
-8. Install and configure virtual environment.
-   - ```sudo apt install python3-venv```
+8. Install Python virtual environment.
+   - ```sudo apt install -y python3-venv```
    - Create folder for your environments to live:  ```mkdir environments && cd environments```
-   - Create project environment:  ```python3 -m venv webserver```
+9. If using github, clone repository now:
+   - Install with the following:  https://github.com/cli/cli/blob/trunk/docs/install_linux.md
+   - Clonerepo using:  ```gh repo clone USERNAME/REPOSITORY```
+10. Even if not using github, create a folder for your project.
+   - Create project environment:  ```python3 -m venv REPOSITORY``` (I will use 'webserver' as an example)
    - Enter/activate environment:  ```source webserver/bin/activate```
      - You should see "(webserver)" in front of the terminal line, indicating you are working in the environment.
    - Exit/deactivate environment:  ```deactivate```
@@ -34,13 +36,6 @@
    - requirements.txt can be found in this repository.
    - Upload with whatever method. Github, FTP, whatever.
    - ```pip install -r /path/to/requirements.txt```
-
-### Install GUnicorn
-1. Activate virtual environment:
-   - ```cd environments```
-   - ```source webserver/bin/activate```
-2. Install:
-   - ```pip3 install gunicorn```
 
 ### Install Nginx
 1. ```sudo apt update```
