@@ -26,10 +26,12 @@
    - Install with the following:  https://github.com/cli/cli/blob/trunk/docs/install_linux.md
    - Clonerepo using:  ```gh repo clone USERNAME/REPOSITORY```
 10. Even if not using github, create a folder for your project.
-    - Create project environment:  ```python3 -m venv REPOSITORY``` (I will use 'webserver' as an example)
-    - Enter/activate environment:  ```source webserver/bin/activate```
+    - So the directories should be like /home/USER/github/environments/REPOSITORY
+11. Create and activate project environment:
+    - ```python3 -m venv REPOSITORY``` (I will use 'webserver' as an example)
+    - Activate environment:  ```source webserver/bin/activate```
       - You should see "(webserver)" in front of the terminal line, indicating you are working in the environment.
-    - Exit/deactivate environment:  ```deactivate```
+    - Deactivate environment:  ```deactivate```
 
 ### Install Flask and other libraries
 1. Activate virtual environment, upload requirements.txt and install.
@@ -42,6 +44,7 @@
 2. ```sudo apt install -y nginx```
 3. Add allow rule to firewall:
    - ```sudo ufw allow 'Nginx HTTP'``` or ```'Nginx HTTPS'``` or ```'Nginx Full'```
+4. Test that Nginx is working by going the http://IP in a browser. We expect a default Nginx page.
 
 ### Configure Nginx and GUnicorn
 1. Delete default site in sites-enabled directory:
@@ -57,6 +60,7 @@
    - ```sudo nginx -t```
 5. Reload nginx:
    - ```sudo nginx -s reload```
+6. Test that things are working by going to http://IP in a browser. We now expect a 502 Bad Gateway error page.
 
 ### Create Flask Application
 1. Activate virtual environment.
@@ -78,7 +82,8 @@
    - Main/home page should be named index.html.
 6. Once all files are created and a Flask webserver coded, test it out:
    - ```python3 main.py```
-   - In a browser, go to http://ip:port as dictated by what the terminal says after running the previous command.
+   - In a browser, go to http://ip as dictated by what the terminal says after running the previous command.
+   - Nginx should now automatically be passing traffic to port 8000, so you don't need to enter the port name.
    - If you see your html page, it's working.
 
 ### Run GUnicorn
