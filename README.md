@@ -78,7 +78,7 @@ Before you begin, ensure you have the following:
    - ```touch main.py```
    - ```cd website```
    - ```touch __init__.py views.py```
-3. Copy the contents of "main.py", "__init__.py", and "views.py" from this repository. Paste them into their respective files on your Ubuntu server.
+3. Copy the contents of `main.py`, `__init__.py`, and `views.py` from this repository. Paste them into their respective files on your Ubuntu server.
 4. Copy the contents of the HTML files in this repository (under app/website/templates) from this repository. Paste them into your website/templates folder on your Ubuntu server.
 5. Once all files are created and your Flask app is coded, test it out:
    - From the ~/venvs/webserver/app directory, ```python3 main.py```
